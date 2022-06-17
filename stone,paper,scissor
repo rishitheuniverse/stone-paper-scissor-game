@@ -1,0 +1,69 @@
+import random
+lst = ['s','p','sc']
+
+chance = 10
+number_of_chance = 0
+computer_score = 0
+human_score = 0
+
+print("\t \t \t \t stone ,paper ,scissor game \n")
+print("\t \t \t \t Made by Rishi Theuniverse \n")
+print("s for stone \np for paper \nsc for scissor")
+
+while number_of_chance < chance:
+    _input = input('stone , paper ,scissor :')
+    _random = random.choice(lst)
+
+    if _input == _random:
+        print("tie both 0 point to each \n")
+        # if user enter s
+    elif _input == "s" and _random == "p":
+        computer_score = computer_score + 1
+        print(f"your guess {_input} and computer guess is {_random} \n")
+        print("computer wins 1 point \n")
+        print(f"computer_score is {computer_score} and your score is {human_score}\n")
+
+    elif _input == "s" and _random == "sc":
+        human_score = human_score + 1
+        print(f"your guess {_input} and computer guess is {_random} \n")
+        print(" human wins 1 point \n")
+        print(f"computer_score is {computer_score} and your score is {human_score}\n")
+# if user enter sc
+    elif _input == "sc" and _random == "s":
+        computer_score = computer_score + 1
+        print(f"your guess {_input} and computer guess is {_random} \n")
+        print("computer wins 1 point \n")
+        print(f"computer_score is {computer_score} and your score is {human_score}\n")
+    elif _input == "sc" and _random == "p":
+        human_score = human_score + 1
+        print(f"your guess {_input} and computer guess is {_random} \n")
+        print(" human wins 1 point \n")
+        print(f"computer_score is {computer_score} and your score is {human_score}\n")
+# if user enter p
+    elif _input == "p" and _random == "s":
+        computer_score = computer_score + 1
+        print(f"your guess {_input} and computer guess is {_random} \n")
+        print("computer wins 1 point \n")
+        print(f"computer_score is {computer_score} and your score is {human_score}\n")
+    elif _input == "p" and _random == "sc":
+        human_score = human_score + 1
+        print(f"your guess {_input} and computer guess is {_random} \n")
+        print(" human wins 1 point \n")
+        print(f"computer_score is {computer_score} and your score is {human_score}\n")
+    else:
+        print("please enter wright input \n")
+
+    number_of_chance = number_of_chance +1
+    print(f"{chance - number_of_chance} is left out of {chance}\n")
+
+print("game over,see you soon!")
+if computer_score == human_score:
+    print("match draw(tie)")
+elif computer_score > human_score:
+    print("computer wins and you loose")
+else :
+    print(" you wins and computer loose ")
+
+print(f"your score is {human_score} and computer score is {computer_score}")
+
+# made by rishi theuniverse
